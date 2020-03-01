@@ -107,6 +107,28 @@ switch(arrayAluno.length) {
    Ao receber um aluno devidamente cadastrado em nossa lista. Você deverá incrementar uma falta ao aluno. Você deverá dar um feedback ao concluir a tarefa. Só poderá aplicar falta em aluno se o mesmo tiver matriculado em um curso.
 */
 
+let aplicarFalta = (aluno) => {
+    for(let i = 0; i < alunosDaEscola.length; i++) {
+        if(alunosDaEscola[i].nome == aluno) {
+           var indexAluno = alunosDaEscola.indexOf(alunosDaEscola[i]);
+        } else{
+            var indexAluno = -1
+        };
+    };
+    switch(indexAluno > 0) {
+       case true:
+            alunosDaEscola[indexAluno].faltas++;
+            console.log(`Foi adicionada uma falta ao aluno ${aluno}.`)
+            break;
+       default:
+           console.log(`Aluno ${aluno}, não cadastrado no sistema.`)
+    };
+
+};
+
+// ## TESTE ##
+// aplicarFalta('Lucc');
+
 // ^ FIM APLICAR FALTA=====================================================================================
 
 //   ## APLICAR NOTA ##====================================================================================
