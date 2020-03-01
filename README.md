@@ -47,7 +47,7 @@
   /* Por meio dessa função, podemos pesquisar um aluno por nome na lista de aluno. Ela deverá exibir um feedback, tanto para quando encontrar o aluno, tanto quando não encontrar. E deverá devolver um aluno em seu retorno. */
 }
   function matricularAluno(aluno:object, curso:string){
-  /* Essa funcionalidade irá permitir, cadastrar um aluno em um curso. 
+s  /* Essa funcionalidade irá permitir, cadastrar um aluno em um curso. 
   Essa função só poderá ser executada em um aluno já devidamente cadastrado no sistema, e deverá armazenar a data atual no momento da matricula
   Lembre-se de exibir o feedback para o usuário. */
 }

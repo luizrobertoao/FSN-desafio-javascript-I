@@ -1,0 +1,109 @@
+let buscarAluno = (aluno) => {
+    alunosDaEscola.map(aluno => {
+        let i = 0;
+        if (alunosDaEscola[i].nome == aluno) {
+            console.log(`Aluno ${aluno} encontrado.`);
+
+        } else {
+            console.log(`Aluno ${aluno} não encontrado.`)
+        };
+    });
+};
+
+
+let buscarAluno = (aluno) => {
+    for(let i = 0; i < alunosDaEscola.length; i++) {
+        if (alunosDaEscola[i].indexOf(aluno) > 0) {
+            console.log(`Aluno ${aluno} encontrado.`)
+            console.log(alunosDaEscola[i]);
+        } else{
+            console.log("Aluno não encontrado.");
+        }
+    }
+}
+
+let listarAlunos = () => {
+    console.log('***LISTANDO ALUNOS CADASTRADOS***')
+    alunosDaEscola.map((aluno) => {
+    console.log('------------------');
+    console.log('Nome: ' + aluno.nome);
+    console.log('Notas: ' + aluno.notas);
+    console.log('Cursos: ' + aluno.cursos);
+    console.log('Faltas: ' + aluno.faltas);
+    });
+};
+
+
+###################################### MATRICULAR ALUNO #######################################################
+
+let matricularAluno = (aluno, curso) => {
+    for(var alunoCadastrado of alunosDaEscola) {
+        switch (alunoCadastrado.nome == aluno) {
+            case true:
+            alunoCadastrado.cursos.push({nomeDoCurso: curso, dataMatricula: new Date()});
+                console.log(`Aluno ${aluno} cadastrado no curso ${curso} com sucesso!`);
+                break;
+            default:
+            console.log(`Aluno ${aluno} não cadastrado.`);
+        };
+    };
+    console.log(alunoCadastrado);
+};
+
+RETORNA
+****SISTEMA DE CONTROLE ESCOLAR****
+Aluno Lucca não cadastrado.
+Aluno Lucca não cadastrado.
+Aluno Lucca não cadastrado.
+Aluno Lucca não cadastrado.
+Aluno Lucca não cadastrado.
+Aluno Lucca cadastrado no curso Design com sucesso!
+{
+  nome: 'Lucca',
+  notas: [ 10, 9.8, 9.6 ],
+  cursos: [
+    { nomeDoCurso: 'UX', dataMatricula: 2020-02-27T19:22:19.377Z },
+    { nomeDoCurso: 'Design', dataMatricula: 2020-02-27T19:22:19.388Z }
+  ],
+  faltas: 0
+}
+
+// ^ FIM BUSCAR ALUNOS=======================================================================================
+
+// ## MATRICULAR ALUNOS ##====================================================================================
+/*
+  Essa funcionalidade irá permitir, cadastrar um aluno em um curso. 
+  Essa função só poderá ser executada em um aluno já devidamente cadastrado no sistema, e deverá armazenar a data atual no momento da matricula
+  Lembre-se de exibir o feedback para o usuário.
+*/
+
+// ^ FIM MATRICULAR ALUNOS==================================================================================
+
+//   ## APLICAR FALTA ##====================================================================================
+/*
+   Ao receber um aluno devidamente cadastrado em nossa lista. Você deverá incrementar uma falta ao aluno. Você deverá dar um feedback ao concluir a tarefa. Só poderá aplicar falta em aluno se o mesmo tiver matriculado em um curso.
+*/
+
+// ^ FIM APLICAR FALTA=====================================================================================
+
+//   ## APLICAR NOTA ##====================================================================================
+/*
+   Ao receber um aluno devidamente cadastrado em nossa lista. Você deverá adicionar uma nota ao aluno na sua lista de notas. Você deverá dar um feedback ao concluir a tarefa. Só poderá aplicar nota em aluno se o mesmo tiver matriculado em um curso.
+*/
+
+  // ^ FIM APLICAR NOTA====================================================================================
+  
+//   ## APROVAR ALUNO ##====================================================================================
+/* 
+   Ao receber um aluno devidamente cadastrado em nossa lista, deverá dizer se o mesmo está aprovado ou não. Os critérios de aprovação são: ter no máximo 3 faltas e média 7 em notas.
+   Só o aluno só poderá ser aprovado se o mesmo tiver matriculado em um curso.
+*/
+
+  // ^ FIM APROVAR ALUNO===================================================================================
+
+
+  var objAluno = encontrar[0];
+        let listarCursos = () => {
+            for(i = 0; i < objAluno.cursos; i++) {
+            objAluno.cursos[i].nomeDoCurso
+            };
