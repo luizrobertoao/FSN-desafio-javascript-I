@@ -136,6 +136,33 @@ let aplicarFalta = (aluno) => {
    Ao receber um aluno devidamente cadastrado em nossa lista. Você deverá adicionar uma nota ao aluno na sua lista de notas. Você deverá dar um feedback ao concluir a tarefa. Só poderá aplicar nota em aluno se o mesmo tiver matriculado em um curso.
 */
 
+let aplicarNota = (aluno, nota) => {
+    for(let i = 0; i < alunosDaEscola.length; i++) {
+        if(alunosDaEscola[i].nome == aluno) {
+           var indexAluno = alunosDaEscola.indexOf(alunosDaEscola[i]);
+        } else{
+            var indexAluno = -1
+        };
+    };
+    var checarDuplicidade = alunosDaEscola.filter(buscado => buscado.nome == aluno);
+    switch(checarDuplicidade.length) {
+       case 1:
+            alunosDaEscola[indexAluno].notas.push(nota);
+            console.log(`A nota ${nota} foi adicionada ao aluno ${aluno}.`)
+            break;
+       case 0: 
+           console.log(`Aluno ${aluno}, não cadastrado no sistema.`)
+           break;
+       default:
+           console.log(`FALHA! ==> Aluno ${aluno} tem cadastro duplicado.`) 
+    };
+
+};
+
+// ## TESTE ##
+
+// aplicarNota('Henrique', 5);
+
   // ^ FIM APLICAR NOTA====================================================================================
   
 //   ## APROVAR ALUNO ##====================================================================================
